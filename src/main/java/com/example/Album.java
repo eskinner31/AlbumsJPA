@@ -10,7 +10,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class Albums {
+public class Album {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
