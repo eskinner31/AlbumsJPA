@@ -23,11 +23,12 @@ public class AlbumController {
 
     @GetMapping("")
     public Iterable<Album> getAllAlbums() {
-        return repository.findAll();
+        return this.repository.findAll();
     }
 
     @PostMapping("/create")
-    public void addAlbum(@RequestBody Album album) {
-        repository.save(album);
+    public Album addAlbum(@RequestBody Album album) {
+        this.repository.save(album);
+        return album;
     }
 }
